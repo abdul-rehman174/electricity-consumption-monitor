@@ -45,3 +45,42 @@ Change the password after first login, then delete `setup.php`.
 > `includes/functions.php` and the DB credentials in `config/db.php`.
 
 ---
+
+## Bill calculation
+
+- **Monthly kWh** per appliance = `(Wattage × Hours/day × 30) ÷ 1000` (FR-08)
+- **Bill** = progressive WAPDA slabs — each unit bracket charged at its own rate
+  and summed (FR-09).
+
+Tariff rates live in **one place** — `config/tariff.php` (`$WAPDA_SLABS`) — per NFR-05.
+The rates included are **representative 2024-style residential values for academic
+demonstration**; edit that array to match official figures.
+
+---
+
+## Project structure
+
+```
+electricity-consumption-monitor/
+├── config/
+│   ├── db.php           # MySQLi connection (edit credentials here)
+│   └── tariff.php       # WAPDA slab rates + bill calculation (single source)
+├── includes/
+│   ├── functions.php    # session, auth guards, helpers
+│   ├── header.php       # layout + navbar (Bootstrap, Chart.js)
+│   └── footer.php
+├── appliances/          # add / edit / delete / list
+├── bills/               # bill summary + history
+├── alerts/              # budget alert history
+├── admin/               # user management (admin only)
+├── database/ecms.sql    # schema (4 tables)
+├── assets/css/style.css
+├── register.php  login.php  logout.php
+├── dashboard.php  profile.php
+└── setup.php            # one-time admin seeding
+```
+
+## Database (Section 5 of the SRS)
+
+`users` · `appliances` · `monthly_bills` · `alerts` — see `database/ecms.sql`.
+Foreign keys use `ON DELETE CASCADE`, so deleting a user removes all their data (FR-20).
