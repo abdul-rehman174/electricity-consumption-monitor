@@ -45,3 +45,74 @@ more (this is how WAPDA bills work). The app adds it all up to give the estimate
 > The prices can be changed any time from **Admin → Tariff** — no coding needed.
 
 ---
+
+## How to start the app
+
+You need it running on the computer first. Open a terminal and run:
+
+```bash
+# 1. Start the database
+sudo service mariadb start
+
+# 2. Start the website
+php -S localhost:8000 -t ~/Videos/SRC
+```
+
+Then open this in your browser:
+
+### 👉 http://localhost:8000/electricity-consumption-monitor/
+
+(Leave the second command running while you use the app. Press `Ctrl + C` to stop it.)
+
+---
+
+## How to log in
+
+**Try the ready-made demo account (already has data and charts):**
+```
+Email:    demo@electricity-consumption-monitor.local
+Password: demo123
+```
+
+**Admin account (manage users & prices):**
+```
+Email:    admin@electricity-consumption-monitor.local
+Password: admin123
+```
+
+Or click **Register** to make your own new household account.
+
+---
+
+## How to use it (household user)
+
+1. **Log in** (or register).
+2. Go to **Appliances → Add Appliance**. Enter a name, its watts, and hours per day.
+3. Add a few more appliances the same way.
+4. Open the **Dashboard** to see your total units, estimated bill, and charts.
+5. Open **Bills** to see the bill broken down per appliance.
+6. If your bill goes over your budget, a **red alert** appears on the dashboard and in **Alerts**.
+7. Change your budget limit any time in **Profile**.
+
+---
+
+## What the admin can do
+
+- **Admin** page — see every registered user and delete accounts.
+- **Tariff** page — change the price of one unit (or set up price slabs). New prices
+  apply to bills straight away.
+
+---
+
+## Built with
+
+PHP · MySQL (MariaDB) · Bootstrap (design) · Chart.js (charts). Runs on a normal
+computer — no internet needed.
+
+---
+
+## Need help?
+
+- App won't open? Make sure **both** commands above are running.
+- Forgot it's there? The web address is always **http://localhost:8000/electricity-consumption-monitor/**.
+- More technical details are in **README.md**.
