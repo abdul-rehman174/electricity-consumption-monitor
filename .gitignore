@@ -1,0 +1,17 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# PHP
+vendor/
+*.log
+
+# Local config overrides (keep db.php template, ignore real secrets if you split them out)
+config/db.local.php
+
+# Build / temp
+*.cache
+tmp/
