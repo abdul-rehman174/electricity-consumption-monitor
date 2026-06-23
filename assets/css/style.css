@@ -1,0 +1,74 @@
+/* ECMS theme — green energy palette */
+:root {
+    --ecms-green: #1B5E20;
+    --ecms-green-light: #2e7d32;
+    --ecms-bg: #f4f7f5;
+}
+
+body {
+    background-color: var(--ecms-bg);
+    min-height: 100vh;
+}
+
+.ecms-navbar {
+    background: linear-gradient(90deg, var(--ecms-green), var(--ecms-green-light));
+}
+
+.ecms-navbar .nav-link {
+    color: rgba(255, 255, 255, 0.85);
+}
+.ecms-navbar .nav-link:hover {
+    color: #fff;
+}
+
+/* Auth (login / register) pages */
+.auth-wrapper {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--ecms-green), var(--ecms-green-light));
+}
+.auth-card {
+    width: 100%;
+    max-width: 420px;
+    border: none;
+    border-radius: 14px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Dashboard stat cards */
+.stat-card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+.stat-card .stat-value {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--ecms-green);
+}
+.stat-card .stat-icon {
+    font-size: 2rem;
+    opacity: 0.25;
+}
+
+.card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+.btn-ecms {
+    background-color: var(--ecms-green);
+    border-color: var(--ecms-green);
+    color: #fff;
+}
+.btn-ecms:hover {
+    background-color: var(--ecms-green-light);
+    color: #fff;
+}
+
+.ecms-footer {
+    border-top: 1px solid #e0e0e0;
+}
