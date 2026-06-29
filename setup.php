@@ -1,7 +1,7 @@
 <?php
 /**
  * One-time setup: creates the default admin account.
- * Visit http://localhost/ecms/setup.php once after importing ecms.sql.
+ * Visit http://localhost/electricity-consumption-monitor/setup.php once after importing ecms.sql.
  *
  * Default admin credentials (change the password after logging in):
  *   email:    admin@ecms.local

@@ -96,6 +96,6 @@ WHERE NOT EXISTS (SELECT 1 FROM tariff_slabs);
 -- Default admin account:
 --   A password hash cannot be reliably hard-coded in SQL, so the admin
 --   user is seeded by running  setup.php  once in the browser
---   (http://localhost/ecms/setup.php). That script uses PHP's
+--   (http://localhost/electricity-consumption-monitor/setup.php). That script uses PHP's
 --   password_hash() to create the account safely.
 -- ---------------------------------------------------------------------

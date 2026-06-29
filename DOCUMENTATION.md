@@ -1,4 +1,4 @@
-x# ECMS — Simple Guide
+# ECMS — Simple Guide
 
 **ECMS (Electricity Consumption Monitoring System)** is a small website that helps a
 household guess its **monthly electricity bill before WAPDA sends the real one**.
@@ -48,21 +48,16 @@ more (this is how WAPDA bills work). The app adds it all up to give the estimate
 
 ## How to start the app
 
-You need it running on the computer first. Open a terminal and run:
+The easiest way is XAMPP (see **WINDOWS-SETUP.md** for the full step-by-step):
 
-```bash
-# 1. Start the database
-sudo service mariadb start
-
-# 2. Start the website
-php -S localhost:8000 -t ~/Videos/SRC
-```
+1. Open the **XAMPP Control Panel** and click **Start** next to **Apache** and **MySQL**.
+2. The first time only, import `database/ecms.sql` in phpMyAdmin and visit `setup.php` once.
 
 Then open this in your browser:
 
-### 👉 http://localhost:8000/electricity-consumption-monitor/
+### 👉 http://localhost/electricity-consumption-monitor/
 
-(Leave the second command running while you use the app. Press `Ctrl + C` to stop it.)
+(Leave Apache and MySQL running in XAMPP while you use the app.)
 
 ---
 
@@ -70,13 +65,13 @@ Then open this in your browser:
 
 **Try the ready-made demo account (already has data and charts):**
 ```
-Email:    demo@electricity-consumption-monitor.local
+Email:    demo@ecms.local
 Password: demo123
 ```
 
 **Admin account (manage users & prices):**
 ```
-Email:    admin@electricity-consumption-monitor.local
+Email:    admin@ecms.local
 Password: admin123
 ```
 

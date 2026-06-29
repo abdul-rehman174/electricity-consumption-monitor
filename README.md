@@ -36,7 +36,7 @@ server-side role checks on admin pages, hashed passwords.
 
 ### Default admin login
 ```
-email:    admin@electricity-consumption-monitor.local
+email:    admin@ecms.local
 password: admin123
 ```
 Change the password after first login, then delete `setup.php`.

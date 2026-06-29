@@ -36,15 +36,11 @@ Both should turn green.
 
 ---
 
-## Step 4 — Set the database login
+## Step 4 — Check the database login
 
-On XAMPP, MySQL uses the user **root** with **no password**. Open this file in Notepad:
-
-```
-C:\xampp\htdocs\electricity-consumption-monitor\config\db.php
-```
-
-Make these two lines look like this, then save:
+The project already uses XAMPP's default MySQL login (user **root**, **no password**),
+so there is normally nothing to change. If your MySQL uses a different user or password,
+open `config\db.php` in Notepad and update these two lines, then save:
 
 ```php
 define('DB_USER', 'root');
@@ -93,8 +89,8 @@ http://localhost/electricity-consumption-monitor/seed.php
 
 | Account | Email | Password |
 |---------|-------|----------|
-| Demo household | `demo@electricity-consumption-monitor.local` | `demo123` |
-| Admin | `admin@electricity-consumption-monitor.local` | `admin123` |
+| Demo household | `demo@ecms.local` | `demo123` |
+| Admin | `admin@ecms.local` | `admin123` |
 
 Or click **Register** to make your own account.
 

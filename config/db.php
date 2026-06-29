@@ -6,8 +6,8 @@
  * Default XAMPP credentials are user "root" with an empty password.
  */
 define('DB_HOST', 'localhost');
-define('DB_USER', 'ecms');     // dedicated app user (created during setup)
-define('DB_PASS', 'ecms123');  // change this in production
+define('DB_USER', 'root');   // default XAMPP MySQL user
+define('DB_PASS', '');       // default XAMPP password is empty
 define('DB_NAME', 'ecms');
 
 // Open a single shared connection used by the whole application.
